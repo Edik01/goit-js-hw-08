@@ -30,8 +30,8 @@ function onLoad() {
     Object.entries(formState).forEach(([key, val]) => {
       formEl.elements[key].value = val;
     });
-  } catch (error) {
-    console.log(error.message);
+  } catch ({ message }) {
+    console.log(message);
   }
 }
 
