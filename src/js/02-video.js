@@ -4,7 +4,7 @@ const throttle = require('lodash.throttle');
 const player = new Player(`vimeo-player`);
 
 const STORAGE_KEY = 'videoplayer-current-time';
-player.on('timeupdate', throttle(onTimeupdate, 500));
+player.on('timeupdate', throttle(onTimeupdate, 1000));
 
 function onTimeupdate(time) {
   localStorage.setItem(STORAGE_KEY, time.seconds);
